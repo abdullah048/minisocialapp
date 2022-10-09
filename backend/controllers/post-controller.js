@@ -2,8 +2,16 @@ const Post = require("../models/post");
 const path = require("path");
 
 exports.getAllPosts = async (req, res, next) => {
-  const posts = await Post.find();
-  res.status(200).json(posts);
+  const pageSize = +req.query.pagesize;
+  const currentPage = +req.query.page;
+  const postQuery = Post.find();
+  if (pageSize && currentPage) {
+    postQuery.skip(pageSize * (currentPage - 1)).limit(pageSize);
+  }
+  const posts = await postQuery;
+  const totalPosts = await Post.countDocuments();
+
+  res.status(200).json({ posts, totalPosts });
 };
 
 exports.createPost = async (req, res, next) => {

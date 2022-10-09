@@ -25,3 +25,7 @@ mat-spinner {
 .desc {
   margin-top: 15px;
 }
+
+mat-paginator {
+  margin-top: 2rem;
+}

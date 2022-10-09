@@ -18,6 +18,8 @@ import { PostCreateComponent } from './posts/post-create/post-create.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { PostListComponent } from './posts/post-list/post-list.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { PostListComponent } from './posts/post-list/post-list.component';
     PostCreateComponent,
     HeaderComponent,
     PostListComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

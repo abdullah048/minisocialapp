@@ -18,6 +18,9 @@
   No Posts Yet!
 </p>
 <mat-paginator
-  *ngIf="posts.length > 0 && !isLoading"
+  *ngIf="posts.length > 0"
   [length]="totalPosts"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="pageSizeOptions"
+  (page)="onPageChange($event)"
 ></mat-paginator>
