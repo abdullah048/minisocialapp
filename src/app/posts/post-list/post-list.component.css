@@ -5,3 +5,23 @@ mat-expansion-panel {
 .info-text {
   text-align: center;
 }
+
+mat-spinner {
+  margin: auto;
+}
+
+.post-image {
+  width: 100%;
+  height: 70vh;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.desc {
+  margin-top: 15px;
+}
